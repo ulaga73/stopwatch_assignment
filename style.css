@@ -1,0 +1,41 @@
+body{
+    background-color: azure;
+}
+.stopwatch-container{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: gray;
+    letter-spacing: 5px;
+}
+.item{
+    align-self: center;
+}
+.btn-contain button{
+    width: 8rem;
+    height: 3rem;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: large;
+}
+.btn-contain button:hover{
+    cursor: pointer;
+}
+#start{
+    border: .8px solid green;
+    color: green;
+}
+#pause{
+    border: .8px solid red;
+    color: red;
+}
+#reset{
+    border: .8px solid orange;
+    color: orange;
+}
+#cast{
+    border: .8px solid black;
+    color: black;
+}
