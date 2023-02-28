@@ -14,7 +14,7 @@ let hourHand = 0, minuteHand = 0, secondHand = 0, milliSecondHand = 0;
 let startTimer;
 start.addEventListener("click", () => {
     startTimer = setInterval(() => {
-        milliSecondHand += 10;
+        milliSecondHand++;
         if(milliSecondHand == 1000){
             milliSecondHand = 0;
             secondHand++;
@@ -32,7 +32,7 @@ start.addEventListener("click", () => {
         minutes.innerText = minuteHand < 10 ? "0"+minuteHand : minuteHand;
         seconds.innerText = secondHand < 10 ? "0"+secondHand : secondHand;
         milliSeconds.innerText = milliSecondHand < 10 ? "00"+milliSecondHand : milliSecondHand < 100 ? "0"+milliSecondHand : milliSecondHand;
-    }, 10)
+    }, 1)
 })
 
 pause.addEventListener("click", () => {
@@ -41,6 +41,7 @@ pause.addEventListener("click", () => {
 
 reset.addEventListener("click", () => {
     clearInterval(startTimer);
+    [hourHand, minuteHand, secondHand, milliSecondHand] = [0, 0, 0, 0];
     hours.innerText = "00";
     minutes.innerText = "00";
     seconds.innerText = "00";
